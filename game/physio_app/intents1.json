@@ -1,0 +1,159 @@
+{"intents":
+[
+            {
+             "tag":"greetings",
+             "patterns": ["yes","1"],
+             "responses":["Please Select Your Problems. \na. Neck Injury  \nb. Shoulder Injury \nc. Finger Injury \nd. Leg Injury "]
+            },
+            {
+                "tag":"greetings",
+                "patterns": ["no","2"],
+                "responses":["Thank You."]
+            },
+            {
+             "tag":"que1",
+             "patterns": ["a", "neck injury"],
+             "responses":["The game 'FLAPPY BIRD', which lies under the <b> Head category <b>, is something you are expected to play. <br> Here You can play game <br> <a href='physio_category/head_game_1 '><button type='submit' style='color: #0645AD;''>Click to play</button></a>"]
+            },
+            {
+                "tag":"que1",
+                "patterns": ["b", "shoulder injury"],
+                "responses":["The game 'PING PONG', which lies under the general wellness category, is something you are expected to play.<br> <br> <b> Here You can play game </b> <br> <a href='physio_category/shoulder_game_2 '><button type='submit' style='color: #0645AD;''>Click to play</button></a>"]
+               },
+               {
+                "tag":"que1",
+                "patterns": ["c", "finger injury"],
+                "responses":["The game 'SNAKE', which lies under the general wellness category, is something you are expected to play."]
+               },
+               {
+                "tag":"que1",
+                "patterns": ["d", "leg injury"],
+                "responses":["The game 'FLAPPY BIRD', which lies under the general wellness category, is something you are expected to play."]
+               },      
+            {
+             "tag":"goodbye",
+             "patterns": ["see you later","goodbye","have a good day","bye","cao","see ya"],
+             "responses":["Have a nice day","goodbye"]
+            },
+            
+            {
+             "tag":"name",
+             "patterns": ["what is your name","what should i call you","what's your name?","who are you?","can you tell me your name"],
+             "responses":["You can call me Medbot!","I am Medbot!","I am Medbot your medical assistant"]
+            },
+            {
+             "tag":"common cold symptoms",
+             "patterns": ["common cold symptoms", "a. common cold symptoms"],
+             "responses" : ["Enter your problem :- \n1. Runny or stuffy nose \n2. Sore throat \n3. Cough \n4. Sneezing \n5. Low-grade fever \n6.Generally feeling unwell"]
+
+            },
+            {
+                "tag":"common cold prevention",
+                "patterns": ["runny or stuffy nose","a1","1. common cold symptoms",
+                "sore throat","a2","2. sore throat",
+                "cough","a3","3. cough",
+                "sneezing","a4","4. sneezing",
+                "low-grade fever","a5","5.low-grade fever",
+                "generally feeling unwell","a6","6.generally feeling unwell"],
+                "responses" : ["Medicines you can consume  : (For Acidity : Rabipark DSR, Aciloc) , Cetrizine, Azithromycine, Decongestant, Diphenhydramine, Crocin Cold & Flu Max. \nPreventions that you must follow : Wash your hands, Avoid touching your face,Clean frequently used surfaces, Use hand sanitizers. \nSUGGESTED FOODS ARE:Garlic, Vitamin C-containing fruits, Leafy greens, Broccoli, Oatmeal, Spices, Chicken Soup"]
+   
+            },
+            {
+                "tag":"fever symptoms",
+                "patterns": ["fever symptoms", "b. fever symptoms"],
+                "responses" : ["Enter your problem :- \n1. Sweating \n2. Chills and shivering \n3. Headache \n4. Muscle aches \n5. Loss of appetite \n6.Irritability \n7.Dehydration \n8. General weakness"]
+   
+            },
+            {
+                "tag":"fever symptoms prevention",
+                "patterns":["sweating","b1","1. sweating",
+                "chills and shivering","b2","2. chills and shivering",
+                "headache","b3","3. headache",
+                "muscle aches","b4","4. muscle aches",
+                "loss of appetite","b5","5. loss of appetite",
+                "irritability","b6","6.irritability",
+                "dehydration","b7","7. dehydration",
+                "general weakness","b8","8. general weakness"],
+                "responses": { "a" :  "Medicines you can consume : (For Acidity : Rabipark DSR, Aciloc),  Paragesic, Acepar SP, aspirin, Crocin Cold & Flu Max, \nPrevention that you must follow : Wash your hands, Cover your mouth when you cough and your nose when you sneeze, Clean frequently used surfaces, Avoid sharing cups, glasses, and eating utensils with other people. \nSuggested food are: Garlic, Vitamin C-containing fruits, Leafy greens, Broccoli, Oatmeal, Spices, Chicken Soup" , "b" : "Prevention that you must follow : Wash your hands, Cover your mouth when you cough and your nose when you sneeze, Clean frequently used surfaces, Avoid sharing cups, glasses, and eating utensils with other people. \nSuggested food are: Garlic, Vitamin C-containing fruits, Leafy greens, Broccoli, Oatmeal, Spices, Chicken Soup" }
+            },
+            {
+                "tag":"diabetes symptoms",
+                "patterns": ["diabetes symptoms", "c. diabetes symptoms"],
+                "responses" : ["Enter your problem :- \n1. Increased hunger \n2. Increased thirst \n3. Weight loss \n4. Frequent urination \n5. Blurry vision \n6. Extreme fatigue"]
+   
+            },
+            {
+                "tag":"Diabetes symptoms prevention",
+                "patterns":["increased hunger","c1","1. increased hunger",
+                "increased thirst","c2","2. iincreased thirst",
+                "weight loss","c3","3. weight loss",
+                "frequent urination","c4","4. frequent urination",
+                "blurry vision","c5","5. blurry vision",
+                "extreme fatigue","c6","6.extreme fatigue"],
+                "responses":["Medicines you can consume : \nInsulin :- \nHumulin R U-100, \nNovolin R FlexPen, \nNovolin R ReliOn, \nNovolin R FlexPen ReliOn \nInhibitors :- \nBiguanides, \nDopamine-2 agonist, \nDipeptidyl peptidase-4 (DPP-4) inhibitor, \nDipeptidyl peptidase-4 (DPP-4) inhibitors, \nGlucagon-like peptide-1 receptor agonists \nPrevention that you must follow : Cut Sugar and Refined Carbs From Your Diet, Work Out Regularly, Drink Water as Your Primary Beverage, Lose Weight If You're Overweight or Obese, Quit Smoking, Follow a Very-Low-Carb Diet, Watch Portion Sizes. \nSUGGESTED FOODS ARE:Leafy greens,Avocados, Eggs"]
+            },
+            {
+                "tag":"depression symptoms",
+                "patterns": ["depression symptoms", "d. depression symptoms"],
+                "responses" : ["Enter your problem :- \n1. Hopeless outlook \n2. Lost interest \n3. Increased fatigue \n4. sleep problem \n5. Anxiety \n6. change in weight \n7. Looking at death"]
+   
+            },
+            {
+                "tag":"Depression symptoms",
+                "patterns":["hopeless outlook","d1","1. hopeless outlook",
+                "lost interest","d2","2. lost interest",
+                "increased fatigue","d3","3. increased fatigue",
+                "sleep problem","d4","4. sleep problem",
+                "anxiety","d5","5. anxiety",
+                "change in weight","d6","6. change in weight",
+                "looking at death","d7","7. looking at death"],
+                "responses":["Medicines you can consume :   citalopram (Celexa), escitalopram (Lexapro), paroxetine (Paxil, Pexeva), fluoxetine (Prozac, Sarafem), sertraline (Zoloft). \nPrevention that you must follow : You can help prevent depression by getting enough sleep, eating a healthy diet and practicing regular self-care activities such as exercise, meditation and yoga. Cut back on social diagram, Reduce alcohol and drug use. \nSuggested food are :- Get Enough Vitamin D, Include Omega-3 Fatty Acids, Beans and legumes"]
+            },
+            {
+                "tag":"asthma symptoms",
+                "patterns": ["asthma symptoms", "f", "f. asthma symptoms"],
+                "responses" : ["Enter your problem :- \n1. Coughing \n2. Tightness in the chest \n3. Shortness of breath \n4. Difficulty talking \n5. Panic \n6. Fatigue"]
+   
+            },
+            {
+                "tag":"Asthma symptoms prevention",
+                "patterns":["coughing","f1","1. coughing",
+                "tightness in the chest","d2","2. tightness in the chest",
+                "shortness of breath","d3","3. shortness of breath",
+                "difficulty talking","d4","4. difficulty talking",
+                "panic","d5","5. panic",
+                "fatigue","d6","6. fatigue"],
+                "responses":["Medicines you can consume : epinephrine, anticholinergic, Proair HFA. \nPrevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens, Avoid Smoke of Any Type, Get vaccinated for influenza and pneumonia, Monitor your breathing, Pay attention to increasing quick-relief inhaler use. \nSuggested food are :carrots, juice, eggs, broccoli, cantaloupe, milk"]
+            },
+            {
+             "tag":"common cold prevention",
+             "patterns":["What medicines can I buy to help me with my common cold?","tell me some prevention method from common cold","What should I eat or drink if i am suffering from common cold?","How can I keep from getting a cold or the flu?"],
+             "responses":["medicines you can consume : Dextromethorphan,Decongestant,Diphenhydramine,Crocin Cold & Flu Max, preventions that you must follow :Wash your hands,Avoid touching your face,Clean frequently used surfaces,Use hand sanitizers,SUGGESTED FOODS ARE:Garlic,Vitamin C-containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
+            },
+            {
+             "tag":"fever prevention",
+             "patterns":["What medicines can I buy to help me with my fever?","tell me some prevention method from fever","What should I eat or drink if i am suffering from fever?","How can I keep from getting a fever?"],
+             "responses":["medicines you can consume : acetaminophen ,ibuprofen,aspirin,Crocin Cold & Flu Max, prevention that you must follow :Wash your hands,Cover your mouth when you cough and your nose when you sneeze,Clean frequently used surfaces,Avoid sharing cups, glasses, and eating utensils with other people.,SUGGESTED FOODS ARE:Garlic,Vitamin C-containing fruits,Leafy greens,Broccoli,Oatmeal,Spices,Chicken Soup"]
+            },
+            {
+             "tag":"diabetes prevention",
+             "patterns":["What medicines can I buy to help me with my diabetes?","tell me some prevention method from diabetes","What should I eat or drink if i am suffering from diabetes?","How can I keep from getting diabetes?"],
+             "responses":["medicines you can consume : Insulin ,Amylinomimetic drug,Dipeptidyl peptidase-4 (DPP-4) inhibitor, prevention that you must follow :Cut Sugar and Refined Carbs From Your Diet,Work Out Regularly,Drink Water as Your Primary Beverage,Lose Weight If You're Overweight or Obese,Quit Smoking, Follow a Very-Low-Carb Diet,Watch Portion Sizes,SUGGESTED FOODS ARE:Leafy greens,Avocados,Eggs"]
+            },
+            {
+             "tag":"depression prevention",
+             "patterns":["What medicines can I buy to help me with my depression?","tell me some prevention method from depression","What should I eat or drink if i am suffering from depression?","How can I keep from getting depression?"],
+             "responses":["medicines you can consume :  brexpiprazole, quetiapine,olanzapine, prevention that you must follow :Exercise regularly,Cut back on social media time,Drink Water as Your Primary Beverage,Build strong relationships,Minimize your daily choices, Follow a Very-Low-Carb Diet,SUGGESTED FOODS ARE:Get Enough Vitamin D,Include Omega-3 Fatty Acids,Beans and legumes"]
+            },
+            {
+             "tag":"asthma prevention",
+             "patterns":["What medicines can I buy to help me with my asthma?","tell me some prevention method from asthma","What should I eat or drink if i am suffering from asthma?","How can I keep from getting asthma?"],
+             "responses":["medicines you can consume : epinephrine,anticholinergic,Proair HFA, prevention that you must follow : Identify Asthma Triggers, Stay Away From Allergens,Avoid Smoke of Any Type,SUGGESTED FOODS ARE:carrots,juice,eggs,broccoli,cantaloupe,milk"]
+            },
+            {
+             "tag":"Consultation",
+             "patterns": ["who should i contact for consultation?","is there any doctor available?","can you give me some suggestions for doctor consultations?","can you set up a meeting with a doctor for consultation?","is there any doctor available for consultation"],
+             "responses":["You can contact various doctors here for any kind of consultation: 1. https://www.1mg.com/online-doctor-consultation, 2. https://www.tatahealth.com/online-doctor-consultation/general-physician, 3. https://www.doconline.com/, or you can pay a visit to your local area doctor or family doctor."]
+            }
+]}
+        

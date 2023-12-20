@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #d9f8d9;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select, button {
+            margin-bottom: 10px;
+        }
+
+        /* Animated Button Styles */
+        .animated-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid #3498db;
+            color: #3498db;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .animated-button:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #video-container {
+            margin-top: 20px;
+        }
+
+        #video-feed {
+            border: 1px solid #ccc;
+        }
+    </style>
+    <title>Snake Game with Video Background</title>
+</head>
+<body>
+    <form method="post" action="{% url 'leg_exercise_data' %}">
+        {% csrf_token %}
+        <label for="age">Enter your age:</label>
+        <input type="number" name="age" required>
+        
+        <label for="leg_injury_history">Do you have a leg injury history?</label>
+        <select name="leg_injury_history">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    
+        <button class="animated-button" type="submit">Submit</button>
+    </form>
+     
+    <h1>Leg Exercise</h1>
+    <p>{{age}}</p>
+    <p>{{injury}}</p>
+    <input class="animated-button" type="button" value="Start Exercise" onclick="StartCamera()">
+    <div id="video-container">
+        <img src="" id="video-feed" width="500" height="500">
+    </div>
+    <script>
+        function StartCamera(){
+            let videoContainer = document.getElementById('video-container');
+            let videoElement = document.getElementById('video-feed');
+            videoElement.src = "{% url 'leg_ex' %}";
+        }
+    </script>
+</body>
+</html>

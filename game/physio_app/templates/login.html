@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <!-- ... (existing head content) ... -->
+    <script type="text/javascript" src="{% static 'assets/js/script.js' %}"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo.png' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/rstyle.css' %}" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Dhurjati&family=Josefin+Sans&family=Roboto+Condensed&family=Teko:wght@300&display=swap');
+    </style>
+    <!-- ... (existing head content) ... -->
+    <form class="login-form" method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+  
+      <!-- Your form fields go here -->
+  </form>
+    <style>
+      body {
+        background-image: url('{% static 'assets/img/hero-banner-bg.png' %}');
+        background-size: cover;
+        font-family: 'Work Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center; /* Center the content horizontally */
+        justify-content: center; /* Center the content vertically */
+      }
+
+      .header {
+        text-align: center; /* Center the header content */
+      }
+
+      .navbar-list {
+        display: flex;
+        justify-content: space-around; /* Add space between buttons */
+      }
+
+      .navbar-item {
+        margin: 10px; /* Add margin for spacing */
+      }
+
+      .login-container {
+        max-width: 400px;
+        margin-top: 150px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      .login-form {
+        text-align: center;
+      }
+
+      .login-input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      .login-btn {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+    <!-- ... (existing head content) ... -->
+  </head>
+
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header active" data-header>
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="{% static 'assets/img/logo.png' %}" width="110" height="53" alt="unigine home" />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="{% url 'index' %}" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#" class="navbar-link" data-nav-link>contacts</a>
+            </li>
+            
+            <li class="navbar-item">
+              <a href="{% url 'register' %}" class="btn" data-btn>REGISTER</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ... (existing body content) ... -->
+
+    <div class="login-container" style="padding-left: 35px;padding-right: 35px;">
+        <img src="{% static 'assets/img/logo.png'%}" alt="">
+        <h2 class="login-title">Login</h2>
+        <form class="login-form">
+            <input type="text" class="login-input" placeholder="Username or Email">
+            <input type="password" class="login-input" placeholder="Password">
+            <button type="submit"></button><li class="navbar-item">
+            <a href="{% url 'index_li' %}" class="login-btn" data-nav-link>login</a>
+            <a href="{% url 'register' %}"><span style="margin-top: 9px;color: #36C;font-size: 13px;">If you don't have account</span></a>
+    
+        </form>
+    </div>
+
+    <!-- ... (existing body content) ... -->
+
+  </body>
+  <!-- ... (existing HTML content) ... -->
+</html>

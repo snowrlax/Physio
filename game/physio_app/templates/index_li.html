@@ -1,0 +1,660 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    - primary meta tags
+  -->
+    <title>GAME PHYSIO</title>
+    <meta name="title" content="Unigine - Epic Games Made For True Gamers!" />
+    <meta
+      name="description"
+      content="This is an esports and gaming html template made by Muhammad Sami"
+    />
+
+    <!-- 
+    - favicon
+  -->
+  <script type="text/javascript" src="{% static 'assets/js/script.js' %}"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/logo.png' %}" />
+
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700&family=Work+Sans:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 
+    - custom css link
+  -->
+ 
+  <link rel="stylesheet" href="{% static 'assets/css/rstyle.css' %}" />
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+
+
+
+    <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="{% static 'assets/img/logo.png' %}" />
+  <link rel="preload" as="image" href="{% static 'assets/img/hero-banner-bg.png' %}" />
+<!-- Your main HTML file -->
+<!-- Add this script at the end of your body or in the head section -->
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const registerButton = document.querySelector('[data-btn]');
+      
+      registerButton.addEventListener('click', function () {
+          window.location.href = 'register.html';
+      });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('[data-btn]');
+      
+      buttons.forEach(button => {
+          button.addEventListener('click', function () {
+              const targetUrl = this.getAttribute('href');
+              window.location.href = targetUrl;
+          });
+      });
+  });
+</script>
+  </head>
+<script type="text/javascript" src="{static 'assets/js/script.js' %}"> </script>
+  <body id="top">
+    <!-- 
+    - #HEADER
+  -->
+
+    <header class="header active" data-header>
+      <div class="container">
+        <a href="#" class="logo">
+          <img src="{% static 'assets/img/logo.png' %}" width="110" height="53" alt="unigine home" />
+        </a>
+
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link" data-nav-link>home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#tournament" class="navbar-link" data-nav-link
+                >GAME SELECTION</a
+              >
+            </li>
+
+            <li class="navbar-item">
+              <a href="#news" class="navbar-link" data-nav-link
+                >PROGRESS REPORT
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="dash" class="navbar-link" data-nav-link
+                >DASHBOARD
+              </a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#contact" class="navbar-link" data-nav-link>contact</a>
+            </li>
+
+            <!-- ` -->
+
+              <li class="navbar-item">
+                <a href="{% url 'index' %}" class="navbar-link" data-nav-link>Logout</a>
+              </li>  
+          </ul>
+        </nav>
+        <!-- <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span> -->
+      <!-- </button>
+        <button
+          class="nav-toggle-btn"
+          aria-label="toggle menu"
+          data-nav-toggler
+        >
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button> -->
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <!-- 
+        - #HERO
+      -->
+
+        <div class="hero has-before" id="home">
+          <div class="container">
+            <p class="section-subtitle" style="color: black;">Enjoy The Gaming Therapy</p>
+
+            <h1 class="h1 title hero-title"  style="color: black;" >
+              Health Centric Games Made <br />
+              for enjoyable therapy sessions
+            </h1>
+
+            <a href="#" class="btn" data-btn>Begin your session</a>
+
+            <div class="hero-banner">
+              <img
+                src="{% static 'assets/img/hero-banner.png' %}"
+                width="850"
+                height="414"
+                alt="hero banner"
+                class="w-100"
+                
+              /><img src="{% static 'assets/img/hero-banner-bg.png' %}" alt="" class="hero-banner-bg" />
+            </div>
+          </div>
+        </div>
+
+  <!-- 
+        - #UPCOMING
+  -->
+   
+  <section  class="section upcoming" aria-labelledby="upcoming-label" id="tournament" >
+    <div class="container">
+      <p class="section-subtitle" id="upcoming-label"  style="color: black; font-weight: bolder;"> Interactive Gameplay </p>
+      <p class="section-text">
+        Our success in revolutionizing physiotherapy is due in large part to our talented and highly committed team.
+      </p>
+      <ol class="upcoming-list">
+        <li class="upcoming-item">
+          <div class="upcoming-card left has-before"><a href="physio_category/General_Wellness"> 
+             <img src="{% static 'assets/img/head.png'%}" alt="" class="card-banner" width="86px" height="81px" loading="lazy" >
+             <div class="card-meta"></div></a>
+             <p style="color: aliceblue; margin-left: -24px; margin-right: 23px; font-sizefont-size: ;font-size: 14px;font-weight: bolder;">  Enhance mental well-being with focused exercises in the Head Section</p>
+          </div>
+          
+    
+
+          <div class="upcoming-time">
+            <time class="time" datetime="10:00"></time>
+            <time class="date" datetime="2022-05-25"></time>
+            <div class="social-wrapper">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitch"></ion-icon>
+              </a>
+            </div>
+          </div>  
+
+          <div class="upcoming-card right has-before"><a href="physio_category/Cardiac">
+            <img src="{% static 'assets/img/shoulder.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
+            <div class="card-meta"></div></a>
+            <p style="color: aliceblue; margin-left: -24px; margin-right: 56px; font-size: 14px;font-weight: bolder;"> Boost strength and flexibility for a resilient upper body.</p>
+          </div> 
+        </li>  
+
+        <li class="upcoming-item">
+          <div class="upcoming-card left has-before"><a href="physio_category/Falls_Prevention">
+            <img src="{% static 'assets/img/hand.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" />
+            <div class="card-meta"></div></a>
+            <p style="color: aliceblue;  margin-right: 25px; font-size: 14px;font-weight: bolder;">  Empower your hands with strength and agility in the Palm Section</p>
+          </div> 
+
+          <div class="upcoming-time">
+            <time class="time" datetime="10:00"></time>
+            <time class="date" datetime="2022-05-25"></time>
+            <div class="social-wrapper">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitch"></ion-icon>
+              </a>
+            </div>
+          </div>  
+
+          <div class="upcoming-card right has-before"><a href="physio_category/Orthopedic">
+            <img src="{% static 'assets/img/leg.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" style="margin-bottom: 68px;"/>
+            <div class="card-meta" style="margin-bottom: 28px;"></div></a>
+            <p style="color: aliceblue; margin-left: -24px; margin-right: 56px; font-size: 14px;font-weight: bolder;"> Strengthen and support your lower limbs for improved mobility</p>
+          </div>
+        </li>
+        <!-- <li class="upcoming-item">
+          <div class="upcoming-card left has-before"><a href="{% url 'physio_category' %}">
+            <img src="{% static 'assets/img/team-logo-5.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" /></a>
+            <div class="card-meta"></div>
+          </div> 
+
+          <div class="upcoming-time">
+            <time class="time" datetime="10:00"></time>
+            <time class="date" datetime="2022-05-25"></time>
+            <div class="social-wrapper">
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitch"></ion-icon>
+              </a>
+            </div>
+          </div>  
+
+          <div class="upcoming-card right has-before"><a href="{% url 'physio_category' %}">
+            <img src="{% static 'assets/img/team-logo-6.png'%}" class="card-banner" width="90" height="81" alt="Trigger Brain Squad" /></a>
+            <div class="card-meta"></div>
+          </div>
+        </li> -->
+    </div>  
+  </section>
+
+  <!-- 
+        - #NEWS
+      -->
+
+      <!-- <section class="section news" aria-label="our latest news" id="news">
+        <div class="container">
+          <p class="section-subtitle"></p>
+          <h2 class="h2 section-title">
+            Our <span class="span">Services</span>
+          </h2>
+          <p class="section-text">
+            Our success in revolutionizing physiotherapy is due in large part
+            to our talented and highly committed team.
+          </p>
+
+          <ul class="news-list">
+            <li>
+              <div class="news-card">
+                <figure class="card-banner img-holder" style="--width: 600; --height: 400">
+                  <img src="{% static 'assets/img/news-1.jpg' %}" class="img-cover" alt="Innovative Business All Over The World" width="600px" height="400px">
+                </figure>
+                <div class="card-content">
+                  <a href="#" class="card-tag">Business</a>
+                  <a href="#" class="link has-before"></a>
+                </div>  
+              </div>
+            </li> 
+
+            <li>
+              <div class="news-card">
+                <figure class="card-banner img-holder" style="--width: 600; --height: 426">
+                  <img src="{% static 'assets/img/news-2.jpg' %}" class="img-cover" alt="How To Start Initiating An Startup In Few Days" width="600px" height="400px">
+                </figure>
+                <div class="card-content">
+                  <a href="#" class="card-tag">Startup</a>
+                </div>  
+              </div>
+            </li>
+
+            <li>
+              <div class="news-card">
+                <figure class="card-banner img-holder" style="--width: 600; --height: 426">
+                  <img src="{% static 'assets/img/news-3.jpg' %}" class="img-cover" alt="Financial Experts Support Help You To Find Out" width="600px" height="400px">
+                </figure>
+                <div class="card-content">
+                  <a href="#" class="card-tag">Finance</a>
+                </div>  
+              </div>
+            </li>
+
+          </ul>    -->
+          
+    <!-- 
+    - #FOOTER
+  -->
+
+    <footer class="footer" id="contact">
+      <div class="section footer-top">
+        <div class="container">
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img
+                src="{% static 'assets/img/logo.png' %}"
+                width="150"
+                height="73"
+                loading="lazy"
+                alt="Unigine logo"
+              />
+            </a>
+
+            <p class="footer-text">
+
+Our success in revolutionizing physiotherapy is due in large part to our talented and highly committed team.
+            </p>
+
+            <ul class="social-list">
+              <li>
+                <a href="https://www.facebook.com/" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://twitter.com/i/flow/login" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.instagram.com" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.youtube.com/" class="social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="title footer-list-title has-after" style="color: black;">Usefull Links</p>
+
+            
+
+              <li>
+                <a href="#" class="footer-link">Help Center</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Privacy and Policy</a>
+              </li>
+
+              
+
+              <li>
+                <a href="#" class="footer-link">Terms of Use</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-list">
+            <p class="title footer-list-title has-after" style="color: black;">Contact Us</p>
+
+            <div class="contact-item">
+              <span class="span">Location:</span>
+
+              <address class="contact-link"></address>
+            </div>
+
+            <div class="contact-item">
+              <span class="span">Join Us:</span>
+
+              <a href="mailto:Info@unigine.com" class="contact-link"
+                >Info@gamephysio.com</a
+              >
+            </div>
+
+            <div class="contact-item">
+              <span class="span">Phone:</span>
+
+              <a href="tel:+12345678910" class="contact-link">+91 0000000000</a>
+            </div>
+          </div>
+
+          <div class="footer-list">
+            <p class="title footer-list-title has-after" style="color: black;">Newsletter Signup</p>
+            <form action="emailsaving" method="POST" class="footer-form">
+              {% csrf_token %}
+              <input  class="input-field" placeholder="Your Email" type="email" name="email_address" autocomplete="off" style="color: black;" required/>
+              {{msg}}
+              <button type="submit" class="btn" data-btn>Subscribe Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+  
+      </div>
+
+
+     
+<!-- 
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="copyright"></p>
+        </div>
+      </div> -->
+    </footer>
+
+
+    <p class="cp-text" style="background:rgba(162,162,243,255); text-align: center; padding:1.5%;margin-bottom: -151px;padding-left: 4%;margin-left: -202px;margin-right: -199px; font-weight: bold;">
+      © Copyright 2023 Game Physio. All rights reserved.
+    </p>
+    <!-- 
+    - #BACK TO TOP
+  -->
+
+    <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+      <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- 
+    - #CUSTOM CURSOR
+  -->
+
+    <div class="cursor" data-cursor></div>
+
+    <!-- 
+    - custom js link
+  -->
+    <script src="{% static 'script.js' %}"></script>
+
+    <!-- 
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+ <!-- 
+    - Bot Button
+  -->
+  {% csrf_token %}
+  <!-- <p style="color: black;">Hello</p> -->
+  <button class="chatbot__button">
+    <span class="material-symbols-outlined">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <div class="chatbot__header">
+      <h3 class="chatbox__title">Assitant</h3>
+      <span class="material-symbols-outlined">close</span>
+    </div>
+    <ul class="chatbot__box">
+      <li class="chatbot__chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there. How can I help you today?</p>
+      </li>
+      <li class="chatbot__chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Is there any problem ? <br><br> 1. Yes <br> 2. No </p>
+      </li>
+      <li class="chatbot__chat outgoing">
+       
+      </li>
+    </ul>
+    <div class="chatbot__input-box">
+      <textarea
+        class="chatbot__textarea"
+        placeholder="Enter a message..."
+        required
+      ></textarea>
+      <span id="send-btn" class="material-symbols-outlined">send</span>
+    </div>
+  </div>
+
+
+
+
+<script>
+ const chatbotToggle = document.querySelector('.chatbot__button');
+const sendChatBtn = document.querySelector('.chatbot__input-box span');
+const chatInput = document.querySelector('.chatbot__textarea');
+const chatBox = document.querySelector('.chatbot__box');
+const chatbotCloseBtn = document.querySelector('.chatbot__header span');
+
+let userMessage;
+
+const inputInitHeight = chatInput.scrollHeight;
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Event listener for the send button
+  document.getElementById("send-btn").addEventListener("click", function() {
+    // Get user input
+    var userInput = document.querySelector(".chatbot__textarea").value;
+
+    // Check if the user input is not empty
+    if (userInput.trim() !== "") {
+      // Clear the textarea
+      document.querySelector(".chatbot__textarea").value = "";
+
+      // Add the outgoing message to the chat interface
+      var outgoingMessage = document.createElement("li");
+      outgoingMessage.classList.add("chatbot__chat", "outgoing");
+      outgoingMessage.innerHTML = "<p>" + userInput + "</p>";
+      document.querySelector(".chatbot__box").appendChild(outgoingMessage);
+
+      // Scroll to the bottom of the chat box
+      document.querySelector(".chatbot__box").scrollTop = document.querySelector(".chatbot__box").scrollHeight;
+
+      // Send the user input to the server
+      fetch("/chat?user_inp=" + encodeURIComponent(userInput))
+        .then(response => response.text())
+        .then(data => {
+          // Add the incoming message to the chat interface
+          var incomingMessage = document.createElement("li");
+          incomingMessage.classList.add("chatbot__chat", "incoming");
+          incomingMessage.innerHTML = "<p>" + data + "</p>";
+          document.querySelector(".chatbot__box").appendChild(incomingMessage);
+
+          // Scroll to the bottom of the chat box
+          document.querySelector(".chatbot__box").scrollTop = document.querySelector(".chatbot__box").scrollHeight;
+        })
+        .catch(error => {
+          console.error("Error sending message to server:", error);
+        });
+    }
+  });
+});
+{% comment %}
+const createChatLi = (message, className) => {
+  const chatLi = document.createElement('li');
+  chatLi.classList.add('chatbot__chat', className);
+  let chatContent =
+    className === 'outgoing'
+      ? `<p></p>`
+      : `<span class="material-symbols-outlined">smart_toy</span> <p></p>`;
+  chatLi.innerHTML = chatContent;
+  chatLi.querySelector('p').textContent = message;
+  return chatLi;
+};
+
+const generateResponse = (incomingChatLi) => {
+  const API_URL = '/chat';
+  const messageElement = incomingChatLi.querySelector('p');
+  const userMessage = messageElement.textContent.trim();  
+
+  const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value; // Assuming the CSRF token is present in the HTML
+
+  const requestOptions = {
+    method: 'GET', 
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRFToken': csrfToken, // Include the CSRF token in the headers
+    },
+    body: JSON.stringify({
+      user_inp: userMessage,
+    }),
+  };
+
+  fetch(`${API_URL}?user_inp=${encodeURIComponent(userMessage)}`, requestOptions)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      messageElement.textContent = data.choices[0].message.content;
+    })
+    .catch((error) => {
+      messageElement.classList.add('error');
+      messageElement.textContent = 'Oops! Please try again!';
+      console.log(error);
+    })
+    .finally(() => chatBox.scrollTo(0, chatBox.scrollHeight));
+};
+
+const handleChat = () => {
+  userMessage = chatInput.value.trim();
+  if (!userMessage) return;
+  chatInput.value = '';
+  chatInput.style.height = `${inputInitHeight}px`;
+
+  const outgoingChatLi = createChatLi(userMessage, 'outgoing');
+  chatBox.appendChild(outgoingChatLi);
+  chatBox.scrollTo(0, chatBox.scrollHeight);
+
+  const timeoutId = setTimeout(() => {
+    const incomingChatLi = createChatLi('Thinking...', 'incoming');
+    chatBox.appendChild(incomingChatLi);
+    chatBox.scrollTo(0, chatBox.scrollHeight);
+  }, 600);
+
+  generateResponse(outgoingChatLi, timeoutId);
+}; {% endcomment %}
+
+
+chatInput.addEventListener('input', () => {
+  chatInput.style.height = `${inputInitHeight}px`;
+  chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+chatInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey && window.innerWidth > 800) {
+    e.preventDefault();
+    handleChat();
+  }
+});
+chatbotToggle.addEventListener('click', () =>
+  document.body.classList.toggle('show-chatbot')
+);
+chatbotCloseBtn.addEventListener('click', () =>
+  document.body.classList.remove('show-chatbot')
+);
+sendChatBtn.addEventListener('click', handleChat);
+
+</script>
+
+  </body>
+</html>
